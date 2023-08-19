@@ -1,9 +1,7 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import { ThemeProvider } from '@/components/providers/themeProvider';
 import React from 'react';
-import ThemeToggle from '@/components/core/ToggleTheme';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -20,12 +18,7 @@ export default function RootLayout({
   return (
     <>
       <html lang="ru" suppressHydrationWarning>
-        <body>
-          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            <ThemeToggle />
-            {children}
-          </ThemeProvider>
-        </body>
+        <body>{children}</body>
       </html>
     </>
   );
