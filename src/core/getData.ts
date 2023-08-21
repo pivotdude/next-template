@@ -3,7 +3,7 @@ import { BACKEND_URL } from '@/constants/proccess';
 import { httpMethods } from '@/models/CoreModels';
 
 export default async function getData<T>(url: string, method: httpMethods = 'GET', body: any = {}, options: RequestInit = {}): Promise<T> {
-  const fetchOptions = {
+  const fetchOptions: RequestInit = {
     method,
     ...options,
   };
