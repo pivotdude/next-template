@@ -1,7 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-
-// import { Button } from './../../../stories/Button';
-import { Button, ButtonProps } from 'antd';
+import { Button, ButtonProps } from './Button';
 
 const meta: Meta<typeof Button> = {
   title: 'Button',
@@ -14,8 +12,8 @@ type Story = StoryObj<ButtonProps>;
 
 export const Primary: Story = {
   args: {
-    type: 'primary',
+    // type: 'primary',
     children: 'Клик',
-    style: { background: 'black', color: 'white', borderRadius: '0' },
+    // style: { background: 'black', color: 'white', borderRadius: '0' },
   },
 };

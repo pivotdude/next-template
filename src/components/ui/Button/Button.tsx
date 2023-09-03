@@ -1,5 +1,9 @@
-import { Button as AntdButton, ButtonProps } from 'antd';
+import { ButtonHTMLAttributes } from 'react';
 
-export default function Button(props: ButtonProps) {
-  return <AntdButton {...props}>Button</AntdButton>;
+export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  size: 'large' | 'medium' | 'small';
+  color: 'primary' | 'secondary' | 'tertiary' | 'quaternary';
+}
+export function Button(props: ButtonProps) {
+  return <button {...props}>Button</button>;
 }
